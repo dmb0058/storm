@@ -1,0 +1,15 @@
+#
+# An sction to drive in a square where the side lengths are defined by the number of seconds to drive for
+#
+# Part 1: the goal, to be sent by the client
+duration secs_per_side
+uint32 speed
+---
+# Part 2: the result to be sent by the server on completion
+duration time_driven
+uint32 updates_sent
+---
+# Part 3: the feedback, sent periodically by the server during execution
+uint32 side
+duration time_elapsed
+duration time_remaining

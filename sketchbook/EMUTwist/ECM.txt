@@ -1,0 +1,2 @@
+    ATTRS{idProduct}=="0043"
+    ATTRS{idVendor}=="2341"

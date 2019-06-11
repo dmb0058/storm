@@ -1,0 +1,11 @@
+1. Create a directory for the sketch
+2. Copy the Makefile.template into the sketch directory
+3. Add function prototypes if required
+4. Add any libraries to the Makefile
+	ARDUINO_LIBS = ros_lib Wire
+5. Update the target board
+	ARDUINO_PORT = /dev/ttyUSB_IMU
+6. Run "make to build the sketch
+7. Run "make clean" to clear the build directories
+8. Run "make upload" to upload the sketch
+9. Run "make upload monitor clean" to build the sketch, upload it, opsn a "screen" Serial monitor and cllean down the build directories

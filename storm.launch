@@ -1,0 +1,21 @@
+<launch>
+
+<node name="ROS_IMU" pkg="rosserial_python" type="serial_node.py" output="screen">
+	<param name="port" value="/dev/ttyUSB_IMU"/>
+	<param name="baud" value="57600"/>
+</node>
+
+<node name="ROS_EMU" pkg="rosserial_python" type="serial_node.py" output="screen">
+	<param name="port" value="/dev/ttyUSB_EMU"/>
+	<param name="baud" value="57600"/>
+</node>
+
+<node name="ROS_GPS" pkg="gpsd_client" type="gpsd_client" output="screen">
+	<param name="_port" value="2947"/>
+</node>
+
+<node name="ROS_CCU" pkg="storm" type="ROS_CCU.py" output="screen" />
+
+<node name="ROS_SQUARE" pkg="storm" type="Square_action.py" output="screen" />
+
+</launch>

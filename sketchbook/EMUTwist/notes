@@ -1,0 +1,4 @@
+problem is that in auto mode there's nothing written to motion_set topic ..
+
+put trace into the callback, New Twist: ... but nothing happening in loop
+

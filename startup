@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# Start up the Storm ROS nodes
+#
+# this is equivalent to
+#rosrun rosserial_python serial_node.py /dev/ttyUSB_IMU > /tmp/rosserial_python.log 2>&1 &
+#rosrun rosserial_python serial_node.py /dev/ttyUSB_ECM > /tmp/rosserial_python2.log 2>&1 &
+#echo "Starting gps client"
+#rosrun gpsd_client gpsd_client _port:2947 > /tmp/gpsd_client.log 2>&1 &
+#
+#echo "Starting map server"
+#rosrun storm genMap_server.py > /tmp/genMap.log 2>&1 &
+#
+#echo "Starting image server"
+#rosrun storm genImg_server.py > /tmp/genImg.log 2>&1 &
+
+
+echo "Starting roscore"
+roscore > /tmp/roscore.log 2>&1 &
+#echo "Starting rosserial"
+echo "Starting Storm ..."
+roslaunch --wait storm storm.launch
